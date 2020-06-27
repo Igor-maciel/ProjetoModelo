@@ -5,7 +5,13 @@
   "projects": {
     "ProjetoModelo": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        // desabilita criacao o arquivo css e do spec
+        "@schematics/angular:component": {
+          "inlineStyle": true,
+          "spec": false
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
