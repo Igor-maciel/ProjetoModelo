@@ -1,7 +1,14 @@
 <div  class="container main-container">
     <h3>Interpolation</h3>
 
-    <p>O número de cliques é: {{ contadorClique }}</p>
+    <!-- <p>O número de cliques é: {{ contadorClique }}</p> -->
+
+    <p [ngClass]="{
+                'text-secondary': contadorClique < 3,
+                'text-success': contadorClique >= 3,
+                'text-warning': contadorClique >= 5,
+                'text-danger': contadorClique >= 9
+            }">O número de cliques é: {{ contadorClique }}</p>
 
 
     <br><br>
@@ -38,7 +45,7 @@
     <h4>Usando Two-way</h4>
     <input type="text" [(ngModel)]="nome" placeholder="Digite seu nome">
     <br><br>
-    <label class="{{ nome }}">Seu nome é: {{ nome }}</label>
+    <label [ngClass]="nome">Seu nome é: {{ nome }}</label>
 
 
 
