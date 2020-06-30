@@ -5,11 +5,4 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './contato.component.html',
   styles: []
 })
-export class ContatoComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+export class ContatoComponent { }
