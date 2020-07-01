@@ -12,4 +12,6 @@ export const rooteRouterConfig: Routes = [
     { path: 'sobre', component: SobreComponent },
     { path: 'demos', component: DataBindingComponent },
     { path: 'produtos', component: ListaProdutosComponent },
+    { path: 'produto-detalhe/:id', component: ListaProdutosComponent },
+    { path: 'carrinho/:id', component: ListaProdutosComponent },
 ];
