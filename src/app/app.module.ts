@@ -17,6 +17,10 @@ import { DataBindingComponent } from './demos/data-binding/data-binding.componen
 import { ProdutoService } from './produtos/produtos.service';
 import { ListaProdutosComponent } from './produtos/lista-produtos/lista-produtos.component';
 
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+registerLocaleData(localePt);
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +36,7 @@ import { ListaProdutosComponent } from './produtos/lista-produtos/lista-produtos
     BrowserModule,
     [RouterModule.forRoot(rooteRouterConfig, { useHash: false })],
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     ProdutoService,
