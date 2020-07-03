@@ -9,7 +9,10 @@
                 </a>
 
                 <h4 class="card-title">{{ produto.nome | titlecase}}</h4>
-                <p>Por apenas:</p>
+                <div [ngSwitch]="produto.promocao">
+                    <div *ngSwitchCase="true">Promoção: </div>
+                    <div *ngSwitchCase="false">Por apenas:</div>
+                </div>    
 
                 <div *ngIf="produto.promocao" class="card-body">
                     <div><h4 class="card-text">De:
